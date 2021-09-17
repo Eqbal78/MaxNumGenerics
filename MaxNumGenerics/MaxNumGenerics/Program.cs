@@ -8,7 +8,7 @@ namespace MaxNumGenerics
         {
             Console.WriteLine("Welcome To Generics Code!");
             int result=MaxNum.Max(22, 88, 66);
-            Console.WriteLine("Maximum Integer Number is : {0}", result);
+            Console.WriteLine("\nMaximum Integer Number is : {0}", result);
         }
     }
 }
