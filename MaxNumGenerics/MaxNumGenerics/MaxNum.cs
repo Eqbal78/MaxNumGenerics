@@ -6,39 +6,34 @@ namespace MaxNumGenerics
 {
     public class MaxNum<T> where T : IComparable
     {
-        // Instance variables
-        public T a, b, c;
+        // Empty Array
+        public T[] value;
 
-        // Constructor
-        public MaxNum(T a, T b, T c)
+        //Parameter Constructor
+        public MaxNum(T[] value)
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-
+            this.value = value;
         }
-        // Generic method to find maximum value
-        public static T Max(T a, T b, T c)
+
+        // Sorting the Value
+        public T[] Sort(T[] values)
         {
-            if (a.CompareTo(b) >= 0 && a.CompareTo(c) >= 0)
-            {
-                return a;
-
-            }
-            else if (b.CompareTo(a) >= 0 && b.CompareTo(c) >= 0)
-            {
-                return b;
-            }
-            else
-            {
-                return c;
-            }
+            Array.Sort(values);
+            return values;
         }
-        // Generic method to call maximum method
+
+        //Generic method Comparing and find Max Value
+        public T MaxValue(T[] values)
+        {
+            var sorted_values = Sort(values);
+            return sorted_values[^1];
+        }
+
+        // Generic method to call maxvalue method
         public T MaxMethod()
         {
-            T maxNumber = MaxNum<T>.Max(this.a, this.b, this.c);
-            return maxNumber;
+            var max = MaxValue(this.value);
+            return max;
         }
 
     }
