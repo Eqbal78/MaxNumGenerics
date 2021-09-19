@@ -18,7 +18,7 @@ namespace MaxNumGenerics
 
             Console.WriteLine("----------------------------------------------");
 
-            string resultString = MaxNum.Max("Apple", "Peach", "Mango");
+            string resultString = MaxNum.Max("Apple", "Banana", "Mango");
             Console.WriteLine("\nMaximum Float Number is : {0}", resultString);
         }
     }
